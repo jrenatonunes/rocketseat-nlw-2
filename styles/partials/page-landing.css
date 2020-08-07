@@ -1,0 +1,177 @@
+
+#page-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    font-size: 1.6rem; 
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 90vw;
+    max-width: 768px;
+}
+
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.logo-container img {
+    height: 100%;
+}
+
+.logo-container p {
+    font-size: 3.4rem;
+    color: var(--color-text-in-primary);
+}
+
+.hero-image {
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: calc(50% - 1rem);
+    padding: 2rem;
+    min-width: 10rem;
+    background-color: var(--color-primary-lighter);
+    color: var(--color-title-in-primary);
+    border: none;
+    border-radius: .4rem;
+    font-size: 1.8rem;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    color: var(--color-title-in-primary);
+    text-decoration: none; 
+    transition: background-color 0.5s; 
+}
+
+
+
+.button-study {
+    background-color: var(--color-primary-lighter);
+    margin-right: 2rem;
+}
+
+.button-study:hover {
+    background-color: var(--color-primary-light);
+}
+
+.button-classes {
+    background-color: var(--color-secondary);
+}
+
+.button-classes:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+
+.button img {
+    margin-right: 0.6rem;
+}
+
+
+
+.connections {
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.connections span {
+    font-size: 1.5rem;
+    color: var(--color-text-in-primary);
+    margin-right: .5rem;
+}
+
+
+
+@media ( min-width: 1100px ) {
+
+    :root {
+        font-size: 62.5%; 
+    }
+
+    .container {
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 350px 1fr;
+
+        grid-template-areas: 
+        "logo image image"
+        "buttons buttons conections";
+
+        gap: 4rem;
+    }
+
+    .logo-container {
+        grid-area: logo;
+        text-align: initial;
+        align-self: center;
+        margin:0;
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image {
+        grid-area: image;
+        margin: 0;
+    }
+
+    .buttons-container {
+        grid-area: buttons;
+        justify-content: flex-start;
+    }
+
+    .connections {
+        grid-area: conections;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+    }
+
+    .connections span {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+
+}
