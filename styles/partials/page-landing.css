@@ -87,11 +87,11 @@
 }
 
 .button-classes {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
 }
 
 .button-classes:hover {
-    background-color: var(--color-secondary-dark);
+    background-color: var(--color-secundary-dark);
 }
 
 
