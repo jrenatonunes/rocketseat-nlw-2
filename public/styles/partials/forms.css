@@ -6,7 +6,7 @@
     color: var(--color-text-complement);
 }
 
-.input-block,
+
 .textarea-block {
     position: relative;
     margin-top: 2rem;
@@ -28,7 +28,7 @@
 }
 
 .textarea-block textarea {
-    padding-top: 1.2rem 1.6rem;
+    padding: 1.2rem 1.6rem;
     height: 16rem;
     resize: vertical;
 }
