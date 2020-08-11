@@ -61,6 +61,12 @@ const weekdays = [
 ];
 
 
+function getSubjectByNumber(number) {
+    const postition = +number - 1;
+    return subjects[postition];
+}
+
+
 function pageLanding(request, response) {
     return response.render("index.html");
 }
@@ -71,6 +77,16 @@ function pageStudy(request, response) {
 }
 
 function pageGiveClasses(request, response) {
+    const data = request.query;
+
+    const dataIsNotEmpty = Object.keys(data).length > 0;
+
+    if ( dataIsNotEmpty) {
+        data.subject = getSubjectByNumber(data.subject);
+        proffys.push(data);
+        return response.redirect("/study");
+    }
+
     return response.render("give-classes.html", {subjects, weekdays});
 }
 
